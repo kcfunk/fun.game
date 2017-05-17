@@ -1,0 +1,40 @@
+This document outlines the standards for all code written in this project.
+There will be a section for general standards in all coding languages, as well as some for individual languages.
+
+Ganeral coding:
+
+Opening braces should be on the same line as the code related to it, not a seperate line.
+Any if statement without braces must entirely be on one line for clarity,
+ if there is an else on seperate line, use braces.
+Initialize all variables when they're declared, or explicitly set to NULL.
+Output string literals should be in single quotes,
+ most other uses of string literals should be double quoted.
+Always end lines with semicolon (when appropriate).
+Function names should use lower camel case: functionName
+Class names should use upper camel case: ClassName
+Use spaces only when necessary or makes code more readable,
+ no need to seperate parentheses from surrounding, but spaces between operators: if(x + y == 3){ NOT if ( x+y==3 ) {
+ may use spaces to help group/seperate many parentheses: if( ((condition1) && (condition2)) || function(condition3) ){
+
+PHP:
+
+Name variables using the PHP standard of _ for spaces: variable_name
+Use no parentheses for echo: echo 'Hello World!';
+Use type hinting and return type declaration for all function parameters.
+
+JavaScript:
+
+Name variables using lower camel case: variableName
+Declare and initialize all variables at beginning of scope(function or script).
+
+jQuery:
+
+Use $document as opposed to shorthand $ in most cases.
+
+HTML:
+
+All tagnames should be capitalized, no need for spaces between name and brackets,
+ but spaces should surround the tag for readability: <BODY> NOT < body >
+All attribute names should be capitalized, values should be double quoted,
+ except if it's a numeric value: <TAGNAME attribute1="value" attribute2=0>
+Avoid putting multiple opening tags on a line without closing tags.
