@@ -16,6 +16,21 @@ Use spaces only when necessary or makes code more readable,
  no need to seperate parentheses from surrounding, but spaces between operators: if(x + y == 3){ NOT if ( x+y==3 ) {
  may use spaces to help group/seperate many parentheses: if( ((condition1) && (condition2)) || function(condition3) ){
 
+File Extensions and Content:
+
+HTML/PHP code should be seperated into either pure PHP or primarily HTML files.
+Purely PHP files should:
+ have .php extension
+ start with opening <?PHP but have no closing ?>
+ contain no HTML code except possibly debugging echo statements if necessary
+Primarily HTML files should:
+ have .phtml extension
+ always be formatted as a proper HTML file (see HTML below)
+ contain no more than a few lines of PHP code in a given PHP tag
+ mainly just use PHP to retrieve values to be displayed
+Additionally, HTML should contain almost no formatting information, use .css files for formatting
+If there is more than several lines of JS code in a script tag, it should be put in an external .js file
+
 PHP:
 
 Name variables using the PHP standard of _ for spaces: variable_name
