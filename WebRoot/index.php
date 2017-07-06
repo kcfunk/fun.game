@@ -2,6 +2,10 @@
 //index.php will always be the first thing loaded when any page is accessed,
 // this will be ensured by the .htaccess file which I will be adding soon
 
+//Error reporting
+ini_set('display_errors',1);
+error_reporting(E_ALL);
+
 //Define shorthand constant for the server doc root
 define("DOCROOT", $_SERVER['DOCUMENT_ROOT']);
 
