@@ -11,13 +11,13 @@ define("DOCROOT", $_SERVER['DOCUMENT_ROOT']);
 
 //Autoload functions for different folders
 function load_controller($class_name){
-    @include DOCROOT."/Control/".$class_name.".php";
+	@include DOCROOT."/Control/".$class_name.".php";
 }
 function load_application($class_name){
-    @include DOCROOT."/Application/".$class_name.".php";
+	@include DOCROOT."/Application/".$class_name.".php";
 }
 function load_model($class_name){
-    @include DOCROOT."/Model/".$class_name.".php";
+	@include DOCROOT."/Model/".$class_name.".php";
 }
 
 //Register autoload functions
@@ -42,30 +42,30 @@ $is_valid_path = false;
 
 //Check that the path has at least the controller name and method
 if(count($path_array) >= 3){
-    //Get controller clss name from first path part,
-    // in the above example, would be "UserController"
-    $controller = ucfirst($path_array[1]) . "Controller";
-    //Get method to cll on the controller class, simply the second pth section,
-    // in the above example, would be "view"
-    $action = $path_array[2];
-    //Check that the specified controller and method exist
-    if( class_exists($controller) && method_exists($controller, $action) ){
-        //They exist, so the path is valid
-        $is_valid_path = true;
-        //Check if there is any extra data in the address bar
-        if(isset($path_array[3])){
-            //Get data from path
-            $data = $path_array[3];
-        }
-    }
+	//Get controller clss name from first path part,
+	// in the above example, would be "UserController"
+	$controller = ucfirst($path_array[1]) . "Controller";
+	//Get method to cll on the controller class, simply the second pth section,
+	// in the above example, would be "view"
+	$action = $path_array[2];
+	//Check that the specified controller and method exist
+	if( class_exists($controller) && method_exists($controller, $action) ){
+		//They exist, so the path is valid
+		$is_valid_path = true;
+		//Check if there is any extra data in the address bar
+		if(isset($path_array[3])){
+			//Get data from path
+			$data = $path_array[3];
+		}
+	}
 }
 
 //Check if path was invalid
 if(!$is_valid_path){
-    //Invalid, so set controller to default,
-    // and default to displaying index
-    $controller = "DefaultController";
-    $action = "index";
+	//Invalid, so set controller to default,
+	// and default to displaying index
+	$controller = "DefaultController";
+	$action = "index";
 }
 
 //Call the method on the controller and pass the data as parameter

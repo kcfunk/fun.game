@@ -15,6 +15,7 @@ Class names should use upper camel case: ClassName
 Use spaces only when necessary or makes code more readable,
  no need to seperate parentheses from surrounding, but spaces between operators: if(x + y == 3){ NOT if ( x+y==3 ) {
  may use spaces to help group/seperate many parentheses: if( ((condition1) && (condition2)) || function(condition3) ){
+Use tabs for indentation, not multiple spaces
 
 File Extensions and Content:
 

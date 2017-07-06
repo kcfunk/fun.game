@@ -1,18 +1,18 @@
 ## This file allows the user to enter a path for the MVC model, while only
 ##  ever loading index.php
 <IfModule mod_rewrite.c>
-    <IfModule mod_negotiation.c>
-        Options -MultiViews
-    </IfModule>
-    
-    ## Enables the rewrite engine
-    RewriteEngine On
-    
-    ## Replies to all requests with the index.php file, without changing the URI
-    ## Allows files with specified extensions to be accessed normally so pages
-    ##  load all required resources properly
-    ## If there is another type of file you need to access as a resource, simply
-    ##  add it like the others
-    RewriteRule !\.(png|css|js) index.php [L]
-    
+	<IfModule mod_negotiation.c>
+		Options -MultiViews
+	</IfModule>
+	
+	## Enables the rewrite engine
+	RewriteEngine On
+	
+	## Replies to all requests with the index.php file, without changing the URI
+	## Allows files with specified extensions to be accessed normally so pages
+	##  load all required resources properly
+	## If there is another type of file you need to access as a resource, simply
+	##  add it like the others
+	RewriteRule !\.(png|css|js) index.php [L]
+	
 </IfModule>
