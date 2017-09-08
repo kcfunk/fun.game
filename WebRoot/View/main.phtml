@@ -1,7 +1,14 @@
+<!DOCTYPE HTML>
+
 <HTML>
 	<HEAD>
+		<title><?php echo $GLOBALS['title']; ?></title>
 	</HEAD>
 	<BODY>
-		Hello World!
+		<?php
+		if($GLOBALS['content']){
+			include $GLOBALS['content'];
+		}
+		?>
 	</BODY>
 </HTML>

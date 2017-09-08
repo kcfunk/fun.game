@@ -3,7 +3,6 @@
 class User extends UserBase{
 	
 	private $email;
-	private $is_admin;
 	
 	public function getEmail(){
 		return $email;
@@ -13,7 +12,15 @@ class User extends UserBase{
 		
 	}
 	
+	public static function create(UserTemp $user, string $email, string $password) : ?User {
+		
+	}
+	
+	private static function create(int $id, string $username, string $email, string $password) : ?User {
+		
+	}
+	
 	public function getAccountType() : int {
-		return $is_admin ? UserBase::ACCOUNT_ADMIN : UserBase::ACCOUNT_NORMAL;
+		return UserBase::ACCOUNT_NORMAL;
 	}
 }

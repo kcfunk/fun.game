@@ -25,6 +25,9 @@ spl_autoload_register("load_controller");
 spl_autoload_register("load_application");
 spl_autoload_register("load_model");
 
+//Set default page title
+$GLOBALS['title'] = "Cool Game";
+
 //Get URI, remove "/index.php" if necessary
 $uri = str_replace("/index.php", "", $_SERVER['REQUEST_URI']);
 
